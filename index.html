@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Botones de Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff0000;
+        }
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .boton {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">Hello World!</h1>
+    
+    <div class="botones">
+        <button onclick="changeGreeting('Hello Dom!')">Hello Dom!</button>
+        <button onclick="changeGreeting('Hello World!')">Hello World!</button>
+        <button onclick="changeGreeting('Hello World! Hello Dom!')">Hello World! Hello Dom!</button>
+    </div>
+
+    <script>
+        function changeGreeting(text) {
+            document.getElementById('greeting').textContent = text;
+        }
+    </script>
+</body>
+</html>
